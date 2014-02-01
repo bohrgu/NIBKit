@@ -21,44 +21,38 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		ECE35EDE189D961600B2FF30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE35EDD189D961600B2FF30 /* Foundation.framework */; };
-		ECE35F09189D966D00B2FF30 /* NIBChainedView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE35F04189D966D00B2FF30 /* NIBChainedView.m */; };
-		ECE35F0A189D966D00B2FF30 /* NIBController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE35F06189D966D00B2FF30 /* NIBController.m */; };
-		ECE35F0B189D966D00B2FF30 /* NIBView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE35F08189D966D00B2FF30 /* NIBView.m */; };
+		ECE35F22189D9E8E00B2FF30 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECE35F20189D9E8E00B2FF30 /* InfoPlist.strings */; };
+		ECE35F27189D9EF400B2FF30 /* NIBChainedView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE35F04189D966D00B2FF30 /* NIBChainedView.m */; };
+		ECE35F29189DA17B00B2FF30 /* NIBChainedView.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE35F03189D966D00B2FF30 /* NIBChainedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECE35F2A189DA18200B2FF30 /* NIBController.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE35F05189D966D00B2FF30 /* NIBController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECE35F2B189DA18600B2FF30 /* NIBController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE35F06189D966D00B2FF30 /* NIBController.m */; };
+		ECE35F2C189DA18800B2FF30 /* NIBKit.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE35F15189D996600B2FF30 /* NIBKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECE35F2D189DA18D00B2FF30 /* NIBView.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE35F07189D966D00B2FF30 /* NIBView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECE35F2E189DA19100B2FF30 /* NIBView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE35F08189D966D00B2FF30 /* NIBView.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		ECE35ED8189D961600B2FF30 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		ECE35EDA189D961600B2FF30 /* libNIBKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNIBKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE35EDD189D961600B2FF30 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		ECE35EE1189D961600B2FF30 /* NIBKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NIBKit-Prefix.pch"; sourceTree = "<group>"; };
 		ECE35EEB189D961700B2FF30 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		ECE35EEE189D961700B2FF30 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		ECE35F03189D966D00B2FF30 /* NIBChainedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIBChainedView.h; sourceTree = "<group>"; };
 		ECE35F04189D966D00B2FF30 /* NIBChainedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIBChainedView.m; sourceTree = "<group>"; };
 		ECE35F05189D966D00B2FF30 /* NIBController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIBController.h; sourceTree = "<group>"; };
 		ECE35F06189D966D00B2FF30 /* NIBController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIBController.m; sourceTree = "<group>"; };
 		ECE35F07189D966D00B2FF30 /* NIBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIBView.h; sourceTree = "<group>"; };
 		ECE35F08189D966D00B2FF30 /* NIBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIBView.m; sourceTree = "<group>"; };
+		ECE35F15189D996600B2FF30 /* NIBKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIBKit.h; sourceTree = "<group>"; };
+		ECE35F1A189D9E8E00B2FF30 /* NIBKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NIBKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECE35F1B189D9E8E00B2FF30 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		ECE35F1F189D9E8E00B2FF30 /* NIBKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NIBKit-Info.plist"; sourceTree = "<group>"; };
+		ECE35F21189D9E8E00B2FF30 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ECE35F23189D9E8E00B2FF30 /* NIBKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NIBKit-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		ECE35ED7189D961600B2FF30 /* Frameworks */ = {
+		ECE35F17189D9E8E00B2FF30 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECE35EDE189D961600B2FF30 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +62,7 @@
 		ECE35ED1189D961600B2FF30 = {
 			isa = PBXGroup;
 			children = (
-				ECE35EDF189D961600B2FF30 /* NIBKit */,
+				ECE35F1D189D9E8E00B2FF30 /* NIBKit */,
 				ECE35EDC189D961600B2FF30 /* Frameworks */,
 				ECE35EDB189D961600B2FF30 /* Products */,
 			);
@@ -77,7 +71,7 @@
 		ECE35EDB189D961600B2FF30 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ECE35EDA189D961600B2FF30 /* libNIBKit.a */,
+				ECE35F1A189D9E8E00B2FF30 /* NIBKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,43 +81,61 @@
 			children = (
 				ECE35EDD189D961600B2FF30 /* Foundation.framework */,
 				ECE35EEB189D961700B2FF30 /* XCTest.framework */,
-				ECE35EEE189D961700B2FF30 /* UIKit.framework */,
+				ECE35F1B189D9E8E00B2FF30 /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		ECE35EDF189D961600B2FF30 /* NIBKit */ = {
+		ECE35F1D189D9E8E00B2FF30 /* NIBKit */ = {
 			isa = PBXGroup;
 			children = (
 				ECE35F03189D966D00B2FF30 /* NIBChainedView.h */,
 				ECE35F04189D966D00B2FF30 /* NIBChainedView.m */,
 				ECE35F05189D966D00B2FF30 /* NIBController.h */,
 				ECE35F06189D966D00B2FF30 /* NIBController.m */,
+				ECE35F15189D996600B2FF30 /* NIBKit.h */,
 				ECE35F07189D966D00B2FF30 /* NIBView.h */,
 				ECE35F08189D966D00B2FF30 /* NIBView.m */,
-				ECE35EE0189D961600B2FF30 /* Supporting Files */,
+				ECE35F1E189D9E8E00B2FF30 /* Supporting Files */,
 			);
 			path = NIBKit;
 			sourceTree = "<group>";
 		};
-		ECE35EE0189D961600B2FF30 /* Supporting Files */ = {
+		ECE35F1E189D9E8E00B2FF30 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				ECE35EE1189D961600B2FF30 /* NIBKit-Prefix.pch */,
+				ECE35F1F189D9E8E00B2FF30 /* NIBKit-Info.plist */,
+				ECE35F20189D9E8E00B2FF30 /* InfoPlist.strings */,
+				ECE35F23189D9E8E00B2FF30 /* NIBKit-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		ECE35F28189DA10B00B2FF30 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECE35F2A189DA18200B2FF30 /* NIBController.h in Headers */,
+				ECE35F29189DA17B00B2FF30 /* NIBChainedView.h in Headers */,
+				ECE35F2C189DA18800B2FF30 /* NIBKit.h in Headers */,
+				ECE35F2D189DA18D00B2FF30 /* NIBView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		ECE35ED9189D961600B2FF30 /* NIBKit */ = {
+		ECE35F19189D9E8E00B2FF30 /* NIBKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ECE35EFD189D961700B2FF30 /* Build configuration list for PBXNativeTarget "NIBKit" */;
+			buildConfigurationList = ECE35F24189D9E8E00B2FF30 /* Build configuration list for PBXNativeTarget "NIBKit" */;
 			buildPhases = (
-				ECE35ED6189D961600B2FF30 /* Sources */,
-				ECE35ED7189D961600B2FF30 /* Frameworks */,
-				ECE35ED8189D961600B2FF30 /* CopyFiles */,
+				ECE35F16189D9E8E00B2FF30 /* Sources */,
+				ECE35F17189D9E8E00B2FF30 /* Frameworks */,
+				ECE35F18189D9E8E00B2FF30 /* Resources */,
+				ECE35F28189DA10B00B2FF30 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -131,8 +143,8 @@
 			);
 			name = NIBKit;
 			productName = NIBKit;
-			productReference = ECE35EDA189D961600B2FF30 /* libNIBKit.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = ECE35F1A189D9E8E00B2FF30 /* NIBKit.framework */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -155,11 +167,22 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ECE35ED9189D961600B2FF30 /* NIBKit */,
+				ECE35F19189D9E8E00B2FF30 /* NIBKit */,
 				ECE35F10189D97DC00B2FF30 /* NIBKitUniversal */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECE35F18189D9E8E00B2FF30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECE35F22189D9E8E00B2FF30 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		ECE35F14189D97E700B2FF30 /* Universal Framework Builder */ = {
@@ -174,22 +197,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Sets the target folders and the final framework product.\nFMK_NAME=${PROJECT_NAME}\nFMK_VERSION=A\n\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n\n# Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator\n\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\n# Creates and renews the final product folder.\nmkdir -p \"${INSTALL_DIR}\"\nmkdir -p \"${INSTALL_DIR}/Versions\"\nmkdir -p \"${INSTALL_DIR}/Versions/${FMK_VERSION}\"\nmkdir -p \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Resources\"\nmkdir -p \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Headers\"\n\n# Creates the internal links.\n# It MUST uses relative path, otherwise will not work when the folder is copied/moved.\nln -s \"${FMK_VERSION}\" \"${INSTALL_DIR}/Versions/Current\"\nln -s \"Versions/Current/Headers\" \"${INSTALL_DIR}/Headers\"\nln -s \"Versions/Current/Resources\" \"${INSTALL_DIR}/Resources\"\nln -s \"Versions/Current/${FMK_NAME}\" \"${INSTALL_DIR}/${FMK_NAME}\"\n\n# Copies the headers and resources files to the final product folder.\ncp -R \"${DEVICE_DIR}/Headers/\" \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Headers/\"\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Resources/\"\n\n# Removes the binary and header from the resources folder.\nrm -r \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Resources/Headers\" \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Resources/${FMK_NAME}\"\n\n# Uses the Lipo Tool to merge both binary files (i386 + armv7/armv7s) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/Versions/${FMK_VERSION}/${FMK_NAME}\"\n\nrm -r \"${WRK_DIR}\"";
+			shellScript = "# Sets the target folders and the final framework product.\nFMK_NAME=${PROJECT_NAME}\nFMK_VERSION=A\n\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/../Framework/${FMK_NAME}.framework\n\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n\n# Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator\n\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\n# Creates and renews the final product folder.\nmkdir -p \"${INSTALL_DIR}\"\nmkdir -p \"${INSTALL_DIR}/Versions\"\nmkdir -p \"${INSTALL_DIR}/Versions/${FMK_VERSION}\"\nmkdir -p \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Resources\"\nmkdir -p \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Headers\"\n\n# Creates the internal links.\n# It MUST uses relative path, otherwise will not work when the folder is copied/moved.\nln -s \"${FMK_VERSION}\" \"${INSTALL_DIR}/Versions/Current\"\nln -s \"Versions/Current/Headers\" \"${INSTALL_DIR}/Headers\"\nln -s \"Versions/Current/Resources\" \"${INSTALL_DIR}/Resources\"\nln -s \"Versions/Current/${FMK_NAME}\" \"${INSTALL_DIR}/${FMK_NAME}\"\n\n# Copies the headers and resources files to the final product folder.\ncp -R \"${DEVICE_DIR}/Headers/\" \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Headers/\"\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Resources/\"\n\n# Removes the binary and header from the resources folder.\nrm -r \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Resources/Headers\" \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Resources/${FMK_NAME}\"\n\n# Uses the Lipo Tool to merge both binary files (i386 + armv7/armv7s) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/Versions/${FMK_VERSION}/${FMK_NAME}\"\n\nrm -r \"${WRK_DIR}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		ECE35ED6189D961600B2FF30 /* Sources */ = {
+		ECE35F16189D9E8E00B2FF30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECE35F09189D966D00B2FF30 /* NIBChainedView.m in Sources */,
-				ECE35F0A189D966D00B2FF30 /* NIBController.m in Sources */,
-				ECE35F0B189D966D00B2FF30 /* NIBView.m in Sources */,
+				ECE35F27189D9EF400B2FF30 /* NIBChainedView.m in Sources */,
+				ECE35F2B189DA18600B2FF30 /* NIBController.m in Sources */,
+				ECE35F2E189DA19100B2FF30 /* NIBView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ECE35F20189D9E8E00B2FF30 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECE35F21189D9E8E00B2FF30 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		ECE35EFB189D961700B2FF30 /* Debug */ = {
@@ -224,7 +258,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -256,33 +290,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		ECE35EFE189D961700B2FF30 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DSTROOT = /tmp/NIBKit.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NIBKit/NIBKit-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		ECE35EFF189D961700B2FF30 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DSTROOT = /tmp/NIBKit.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NIBKit/NIBKit-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -300,6 +310,53 @@
 			};
 			name = Release;
 		};
+		ECE35F25189D9E8E00B2FF30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NIBKit/NIBKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "NIBKit/NIBKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		ECE35F26189D9E8E00B2FF30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NIBKit/NIBKit-Prefix.pch";
+				INFOPLIST_FILE = "NIBKit/NIBKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -312,14 +369,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ECE35EFD189D961700B2FF30 /* Build configuration list for PBXNativeTarget "NIBKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ECE35EFE189D961700B2FF30 /* Debug */,
-				ECE35EFF189D961700B2FF30 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
 		ECE35F11189D97DC00B2FF30 /* Build configuration list for PBXAggregateTarget "NIBKitUniversal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -327,6 +376,16 @@
 				ECE35F13189D97DC00B2FF30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECE35F24189D9E8E00B2FF30 /* Build configuration list for PBXNativeTarget "NIBKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECE35F25189D9E8E00B2FF30 /* Debug */,
+				ECE35F26189D9E8E00B2FF30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

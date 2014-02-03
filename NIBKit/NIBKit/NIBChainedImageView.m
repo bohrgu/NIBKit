@@ -1,7 +1,7 @@
 /*
- NIBChainedView.m
+ NIBChainedImageView.m
  
- Copyright 2014/01/01 Guillaume Bohr
+ Copyright 2014/02/03 Guillaume Bohr
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -16,9 +16,9 @@
  limitations under the License.
  */
 
-#import "NIBChainedView.h"
+#import "NIBChainedImageView.h"
 
-@implementation NIBChainedView
+@implementation NIBChainedImageView
 
 @synthesize savedFrame;
 @synthesize previousView;

@@ -1,7 +1,7 @@
 /*
  NIBChainedView.h
  
- Copyright 01/01/2014 Guillaume Bohr
+ Copyright 2014/01/01 Guillaume Bohr
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -17,17 +17,13 @@
  */
 
 #import "NIBView.h"
+#import "NIBChainProtocol.h"
 
-@interface NIBChainedView : NIBView
+@interface NIBChainedView : NIBView <NIBChainProtocol>
 {
 @protected
     BOOL alreadyAppeared;
     BOOL removedFromSuperview;
 }
-
-@property (nonatomic, weak) IBOutlet NIBChainedView *previousView;
-@property (nonatomic, weak) IBOutlet NIBChainedView *nextView;
-
-- (void)reframeChainedViews;
 
 @end

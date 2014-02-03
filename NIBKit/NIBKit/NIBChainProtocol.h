@@ -1,7 +1,7 @@
 /*
- NIBChainedView.h
+ NIBChainProtocol.h
  
- Copyright 2014/01/01 Guillaume Bohr
+ Copyright 2014/02/03 Guillaume Bohr
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -16,14 +16,14 @@
  limitations under the License.
  */
 
-#import "NIBView.h"
-#import "NIBChainProtocol.h"
+#import <Foundation/Foundation.h>
 
-@interface NIBChainedView : NIBView <NIBChainProtocol>
-{
-@protected
-    BOOL alreadyAppeared;
-    BOOL removedFromSuperview;
-}
+@protocol NIBChainProtocol <NSObject>
+
+@property (nonatomic, readonly) CGRect savedFrame;
+@property (nonatomic, weak) IBOutlet UIView<NIBChainProtocol> *previousView;
+@property (nonatomic, weak) IBOutlet UIView<NIBChainProtocol> *nextView;
+
+- (void)reframeChainedViews;
 
 @end

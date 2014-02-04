@@ -26,4 +26,6 @@
     BOOL removedFromSuperview;
 }
 
+- (void)sizeToFitWidth;
+
 @end

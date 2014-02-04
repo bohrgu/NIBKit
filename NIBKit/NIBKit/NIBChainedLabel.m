@@ -67,10 +67,11 @@
 
 - (void)willMoveToWindow:(UIWindow *)newWindow
 {
+    [super willMoveToWindow:newWindow];
+    
     if (!alreadyAppeared)
     {
         alreadyAppeared = YES;
-        self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
         [self reframeChainedViews];
     }
 }
@@ -138,6 +139,14 @@
             }
         }
     }
+}
+
+- (void)sizeToFitWidth
+{
+    CGRect newFrame = self.frame;
+    [self sizeToFit];
+    newFrame.size.height = self.frame.size.height;
+    [self setFrame:newFrame];
 }
 
 @end

@@ -67,10 +67,11 @@
 
 - (void)willMoveToWindow:(UIWindow *)newWindow
 {
+    [super willMoveToWindow:newWindow];
+    
     if (!alreadyAppeared)
     {
         alreadyAppeared = YES;
-        self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
         [self reframeChainedViews];
     }
 }

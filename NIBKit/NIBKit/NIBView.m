@@ -22,43 +22,6 @@
 
 @implementation NIBView
 
-+ (instancetype)controllerWithParentController:(NIBController *)controller
-{
-    return [[[self class] alloc] initWithParentController:controller];
-}
-
-- (instancetype)initWithParentController:(NIBController *)controller
-{
-    NIBView *view = nil;
-    
-    // Get items in nib
-    UINib *nib = [UINib nibWithNibName:NSStringFromClass([self class]) bundle:nil];
-    NSArray *itemsInNib = [nib instantiateWithOwner:self options:nil];
-    
-    // Look for object of current class
-    for (id item in itemsInNib)
-    {
-        if ([item isKindOfClass:[NIBView class]])
-        {
-            view = item;
-        }
-    }
-    
-    // Look for a controller
-    for (id item in itemsInNib)
-    {
-        if ([item isKindOfClass:[UIViewController class]])
-        {
-            UIViewController *nestedController = (UIViewController *)item;
-            view.selfController = nestedController;
-            view.weakController = nestedController;
-            [self setParentController:controller];
-        }
-    }
-    
-    return view;
-}
-
 - (id)awakeAfterUsingCoder:(NSCoder *)aDecoder
 {
     // Avoid init loop
@@ -73,7 +36,7 @@
     return self;
 }
 
-+ (NIBView *)loadInstanceUsingPlaceholder:(NIBView *)placeholder
++ (instancetype)loadInstanceUsingPlaceholder:(NIBView *)placeholder
 {
     NIBView *view = nil;
     
@@ -126,6 +89,38 @@
             UIViewController *controller = (UIViewController *)item;
             view.selfController = controller;
             view.weakController = controller;
+        }
+    }
+    
+    return view;
+}
+
++ (instancetype)loadInstanceUsingParentController:(NIBController *)controller
+{
+    NIBView *view = nil;
+    
+    // Get items in nib
+    UINib *nib = [UINib nibWithNibName:NSStringFromClass([self class]) bundle:nil];
+    NSArray *itemsInNib = [nib instantiateWithOwner:self options:nil];
+    
+    // Look for object of current class
+    for (id item in itemsInNib)
+    {
+        if ([item isKindOfClass:[NIBView class]])
+        {
+            view = item;
+        }
+    }
+    
+    // Look for a controller
+    for (id item in itemsInNib)
+    {
+        if ([item isKindOfClass:[UIViewController class]])
+        {
+            UIViewController *nestedController = (UIViewController *)item;
+            view.selfController = nestedController;
+            view.weakController = nestedController;
+            [view setParentController:controller];
         }
     }
     

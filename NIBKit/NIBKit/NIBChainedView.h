@@ -17,13 +17,8 @@
  */
 
 #import "NIBView.h"
-#import "NIBChainProtocol.h"
+#import "NIBChain.h"
 
 @interface NIBChainedView : NIBView <NIBChainProtocol>
-{
-@protected
-    BOOL alreadyAppeared;
-    BOOL removedFromSuperview;
-}
 
 @end

@@ -17,13 +17,8 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "NIBChainProtocol.h"
+#import "NIBChain.h"
 
 @interface NIBChainedImageView : UIImageView <NIBChainProtocol>
-{
-@protected
-    BOOL alreadyAppeared;
-    BOOL removedFromSuperview;
-}
 
 @end

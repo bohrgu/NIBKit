@@ -19,11 +19,11 @@
 #ifndef NIBKit_NIBKit_h
 #define NIBKit_NIBKit_h
 
+#import <NIBKit/NIBChain.h>
 #import <NIBKit/NIBChainedButton.h>
 #import <NIBKit/NIBChainedImageView.h>
 #import <NIBKit/NIBChainedLabel.h>
 #import <NIBKit/NIBChainedView.h>
-#import <NIBKit/NIBChainProtocol.h>
 #import <NIBKit/NIBController.h>
 #import <NIBKit/NIBView.h>
 

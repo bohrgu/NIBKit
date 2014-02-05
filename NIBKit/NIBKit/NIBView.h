@@ -26,8 +26,8 @@
 @property (nonatomic, strong) UIViewController *selfController;
 @property (nonatomic, weak) UIViewController *weakController;
 
-+ (instancetype)controllerWithParentController:(NIBController *)controller;
-- (instancetype)initWithParentController:(NIBController *)controller;
++ (instancetype)loadInstanceUsingPlaceholder:(NIBView *)placeholder;
++ (instancetype)loadInstanceUsingParentController:(NIBController *)controller;
 - (void)setParentController:(NIBController *)controller;
 
 @end

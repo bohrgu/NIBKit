@@ -21,124 +21,27 @@
 @implementation NIBChainedImageView
 
 @synthesize savedFrame;
-@synthesize previousView;
+@synthesize removedFromSuperview;
 @synthesize nextView;
-
-#pragma mark - Appearance Management
 
 - (void)removeFromSuperview
 {
-    if (!removedFromSuperview)
-    {
-        // Bind previous and next views
-        self.nextView.previousView = self.previousView;
-        self.previousView.nextView = self.nextView;
-        
-        // Reframe chained views
-        if (self.nextView)
-        {
-            CGRect nextFrame = self.nextView.frame;
-            nextFrame.origin.y = self.frame.origin.y;
-            [self.nextView setFrame:nextFrame];
-        }
-        else
-        {
-            [self reframeSuperviewUsingFrame:self.previousView.frame];
-        }
-        
-        // Call super method
-        [super removeFromSuperview];
-        
-        // Update status
-        removedFromSuperview = YES;
-    }
+    [self removeChainedViewFromSuperview];
 }
 
 - (void)setHidden:(BOOL)hidden
 {
-    [super setHidden:hidden];
-    
-    if (alreadyAppeared)
+    if (hidden != self.isHidden && !removedFromSuperview)
     {
-        CGRect newFrame = hidden ? CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 0.0f) : savedFrame;
-        [self setFrame:newFrame];
-    }
-}
-
-- (void)willMoveToWindow:(UIWindow *)newWindow
-{
-    [super willMoveToWindow:newWindow];
-    
-    if (!alreadyAppeared)
-    {
-        alreadyAppeared = YES;
-        [self reframeChainedViews];
-    }
-}
-
-#pragma mark - Frame Management
-
-- (void)reframeChainedViews
-{
-    if (self.previousView)
-    {
-        [self.previousView reframeChainedViews];
-    }
-    else
-    {
-        [self reframeNextView];
-    }
-}
-
-- (void)reframeNextView
-{
-    CGRect nextFrame = self.nextView.frame;
-    nextFrame.origin.y = CGRectGetMaxY(self.frame);
-    [self.nextView setFrame:nextFrame];
-}
-
-- (void)reframeSuperviewUsingFrame:(CGRect)rect
-{
-    if ([self.superview isMemberOfClass:[UIScrollView class]])
-    {
-        // Update content size
-        UIScrollView *superScrollView = (UIScrollView *)self.superview;
-        CGSize newContentSize = CGSizeMake(superScrollView.bounds.size.width, CGRectGetMaxY(rect));
-        [superScrollView setContentSize:newContentSize];
-    }
-    else
-    {
-        // Reframe super view
-        CGRect superFrame = self.superview.frame;
-        superFrame.size.height = CGRectGetMaxY(rect);
-        [self.superview setFrame:superFrame];
+        [super setHidden:hidden];
+        [self setChainedViewHidden:hidden savedFrame:&savedFrame];
     }
 }
 
 - (void)setFrame:(CGRect)frame
 {
-    @synchronized(self)
-    {
-        // Save previous frame
-        if (frame.size.height > 0.0f)
-        {
-            savedFrame = frame;
-        }
-        
-        [super setFrame:frame];
-        
-        if (alreadyAppeared)
-        {
-            if (self.nextView)
-            {
-                [self reframeNextView];
-            }
-            else
-            {
-                [self reframeSuperviewUsingFrame:self.frame];
-            }
-        }
-    }
+    [super setFrame:frame];
+    [self reframeNextChainedView:self.nextView];
 }
 
 @end

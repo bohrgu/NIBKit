@@ -21,13 +21,14 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		ECD0CF8A18A039CF00FF61C7 /* NIBChainProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = ECD0CF8918A039CF00FF61C7 /* NIBChainProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECD0CF8A18A039CF00FF61C7 /* NIBChain.h in Headers */ = {isa = PBXBuildFile; fileRef = ECD0CF8918A039CF00FF61C7 /* NIBChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECD0CF8D18A0439800FF61C7 /* NIBChainedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = ECD0CF8B18A0439800FF61C7 /* NIBChainedLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECD0CF8E18A0439800FF61C7 /* NIBChainedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD0CF8C18A0439800FF61C7 /* NIBChainedLabel.m */; };
 		ECD0CF9118A0518000FF61C7 /* NIBChainedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = ECD0CF8F18A0518000FF61C7 /* NIBChainedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECD0CF9218A0518000FF61C7 /* NIBChainedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD0CF9018A0518000FF61C7 /* NIBChainedImageView.m */; };
 		ECD0CF9518A051D500FF61C7 /* NIBChainedButton.h in Headers */ = {isa = PBXBuildFile; fileRef = ECD0CF9318A051D500FF61C7 /* NIBChainedButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECD0CF9618A051D500FF61C7 /* NIBChainedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD0CF9418A051D500FF61C7 /* NIBChainedButton.m */; };
+		ECD0CF9818A2D59D00FF61C7 /* NIBChain.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD0CF9718A2D59D00FF61C7 /* NIBChain.m */; };
 		ECE35F22189D9E8E00B2FF30 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECE35F20189D9E8E00B2FF30 /* InfoPlist.strings */; };
 		ECE35F27189D9EF400B2FF30 /* NIBChainedView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE35F04189D966D00B2FF30 /* NIBChainedView.m */; };
 		ECE35F29189DA17B00B2FF30 /* NIBChainedView.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE35F03189D966D00B2FF30 /* NIBChainedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -39,13 +40,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		ECD0CF8918A039CF00FF61C7 /* NIBChainProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIBChainProtocol.h; sourceTree = "<group>"; };
+		ECD0CF8918A039CF00FF61C7 /* NIBChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIBChain.h; sourceTree = "<group>"; };
 		ECD0CF8B18A0439800FF61C7 /* NIBChainedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIBChainedLabel.h; sourceTree = "<group>"; };
 		ECD0CF8C18A0439800FF61C7 /* NIBChainedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIBChainedLabel.m; sourceTree = "<group>"; };
 		ECD0CF8F18A0518000FF61C7 /* NIBChainedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIBChainedImageView.h; sourceTree = "<group>"; };
 		ECD0CF9018A0518000FF61C7 /* NIBChainedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIBChainedImageView.m; sourceTree = "<group>"; };
 		ECD0CF9318A051D500FF61C7 /* NIBChainedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIBChainedButton.h; sourceTree = "<group>"; };
 		ECD0CF9418A051D500FF61C7 /* NIBChainedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIBChainedButton.m; sourceTree = "<group>"; };
+		ECD0CF9718A2D59D00FF61C7 /* NIBChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIBChain.m; sourceTree = "<group>"; };
 		ECE35EDD189D961600B2FF30 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ECE35EEB189D961700B2FF30 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		ECE35F03189D966D00B2FF30 /* NIBChainedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIBChainedView.h; sourceTree = "<group>"; };
@@ -103,6 +105,8 @@
 		ECE35F1D189D9E8E00B2FF30 /* NIBKit */ = {
 			isa = PBXGroup;
 			children = (
+				ECD0CF8918A039CF00FF61C7 /* NIBChain.h */,
+				ECD0CF9718A2D59D00FF61C7 /* NIBChain.m */,
 				ECD0CF9318A051D500FF61C7 /* NIBChainedButton.h */,
 				ECD0CF9418A051D500FF61C7 /* NIBChainedButton.m */,
 				ECD0CF8F18A0518000FF61C7 /* NIBChainedImageView.h */,
@@ -111,7 +115,6 @@
 				ECD0CF8C18A0439800FF61C7 /* NIBChainedLabel.m */,
 				ECE35F03189D966D00B2FF30 /* NIBChainedView.h */,
 				ECE35F04189D966D00B2FF30 /* NIBChainedView.m */,
-				ECD0CF8918A039CF00FF61C7 /* NIBChainProtocol.h */,
 				ECE35F05189D966D00B2FF30 /* NIBController.h */,
 				ECE35F06189D966D00B2FF30 /* NIBController.m */,
 				ECE35F15189D996600B2FF30 /* NIBKit.h */,
@@ -146,7 +149,7 @@
 				ECE35F2C189DA18800B2FF30 /* NIBKit.h in Headers */,
 				ECE35F2D189DA18D00B2FF30 /* NIBView.h in Headers */,
 				ECD0CF9118A0518000FF61C7 /* NIBChainedImageView.h in Headers */,
-				ECD0CF8A18A039CF00FF61C7 /* NIBChainProtocol.h in Headers */,
+				ECD0CF8A18A039CF00FF61C7 /* NIBChain.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +237,7 @@
 				ECD0CF9618A051D500FF61C7 /* NIBChainedButton.m in Sources */,
 				ECE35F27189D9EF400B2FF30 /* NIBChainedView.m in Sources */,
 				ECD0CF8E18A0439800FF61C7 /* NIBChainedLabel.m in Sources */,
+				ECD0CF9818A2D59D00FF61C7 /* NIBChain.m in Sources */,
 				ECE35F2B189DA18600B2FF30 /* NIBController.m in Sources */,
 				ECE35F2E189DA19100B2FF30 /* NIBView.m in Sources */,
 				ECD0CF9218A0518000FF61C7 /* NIBChainedImageView.m in Sources */,

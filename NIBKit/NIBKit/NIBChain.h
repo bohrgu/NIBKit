@@ -1,5 +1,5 @@
 /*
- NIBChainProtocol.h
+ NIBChain.h
  
  Copyright 2014/02/03 Guillaume Bohr
  
@@ -17,13 +17,20 @@
  */
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @protocol NIBChainProtocol <NSObject>
 
 @property (nonatomic, readonly) CGRect savedFrame;
-@property (nonatomic, weak) IBOutlet UIView<NIBChainProtocol> *previousView;
+@property (nonatomic, readonly) BOOL removedFromSuperview;
 @property (nonatomic, weak) IBOutlet UIView<NIBChainProtocol> *nextView;
 
-- (void)reframeChainedViews;
+@end
+
+@interface UIView (NIBChain)
+
+- (void)removeChainedViewFromSuperview;
+- (void)setChainedViewHidden:(BOOL)hidden savedFrame:(CGRect*)savedFrame;
+- (void)reframeNextChainedView:(UIView *)nextView;
 
 @end

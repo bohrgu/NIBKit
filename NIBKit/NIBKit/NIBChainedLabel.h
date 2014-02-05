@@ -17,14 +17,9 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "NIBChainProtocol.h"
+#import "NIBChain.h"
 
 @interface NIBChainedLabel : UILabel <NIBChainProtocol>
-{
-@protected
-    BOOL alreadyAppeared;
-    BOOL removedFromSuperview;
-}
 
 - (void)sizeToFitWidth;
 

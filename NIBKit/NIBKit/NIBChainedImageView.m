@@ -44,4 +44,10 @@
     [self reframeNextChainedView:self.nextView];
 }
 
+- (void)setNextView:(UIView<NIBChainProtocol> *)view
+{
+    nextView = view;
+    [self reframeNextChainedView:self.nextView];
+}
+
 @end

@@ -24,8 +24,15 @@
 @synthesize removedFromSuperview;
 @synthesize nextView;
 
+- (void)setAutoresizingMask:(UIViewAutoresizing)autoresizingMask
+{
+    [self checkAutoresizingMask:&autoresizingMask];
+    [super setAutoresizingMask:autoresizingMask];
+}
+
 - (void)removeFromSuperview
 {
+    removedFromSuperview = YES;
     [self removeChainedViewFromSuperview];
 }
 
@@ -34,20 +41,20 @@
     if (hidden != self.isHidden && !removedFromSuperview)
     {
         [super setHidden:hidden];
-        [self setChainedViewHidden:hidden savedFrame:&savedFrame];
+        [self setChainedViewHidden:hidden];
     }
 }
 
 - (void)setFrame:(CGRect)frame
 {
     [super setFrame:frame];
-    [self reframeNextChainedView:self.nextView];
+    [self reframeNextChainedView];
 }
 
 - (void)setNextView:(UIView<NIBChainProtocol> *)view
 {
     nextView = view;
-    [self reframeNextChainedView:self.nextView];
+    [self reframeNextChainedView];
 }
 
 @end

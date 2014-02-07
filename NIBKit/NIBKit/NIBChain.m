@@ -20,43 +20,68 @@
 
 @implementation UIView (NIBChain)
 
+- (void)checkAutoresizingMask:(UIViewAutoresizing *)autoresizingMask
+{
+    // Fix to top and disable vertical flexibility
+    *autoresizingMask |= UIViewAutoresizingFlexibleBottomMargin;
+    *autoresizingMask &= ~UIViewAutoresizingFlexibleTopMargin;
+    *autoresizingMask &= ~UIViewAutoresizingFlexibleHeight;
+}
+
 - (void)removeChainedViewFromSuperview
 {
     // Hide self instead of removing it from its superview (in order to preserve nib chain)
     [self setHidden:YES];
 }
 
-- (void)setChainedViewHidden:(BOOL)hidden savedFrame:(CGRect*)savedFrame
+- (void)setChainedViewHidden:(BOOL)hidden
 {
+    UIView<NIBChainProtocol> *castSelf = (UIView<NIBChainProtocol> *)self;
+    
     CGRect newFrame;
     if (hidden)
     {
-        *savedFrame = self.frame;
+        // Save current frame and shrink after
+        [castSelf setSavedFrame:self.frame];
         newFrame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 0.0f);
     }
     else
     {
-        newFrame = *savedFrame;
+        // Reset using saved frame
+        newFrame = castSelf.savedFrame;
     }
+    
     [self setFrame:newFrame];
 }
 
-- (void)reframeNextChainedView:(UIView *)nextView
+- (void)reframeNextChainedView
 {
-    if (nextView)
+    UIView<NIBChainProtocol> *castSelf = (UIView<NIBChainProtocol> *)self;
+    
+    if (castSelf.nextView)
     {
-        CGRect nextFrame = nextView.frame;
+        // Reframe next view
+        CGRect nextFrame = castSelf.nextView.frame;
         nextFrame.origin.y = CGRectGetMaxY(self.frame);
-        [nextView setFrame:nextFrame];
+        [castSelf.nextView setFrame:nextFrame];
     }
     else
     {
+        // Check superview class
         if ([self.superview isMemberOfClass:[UIScrollView class]])
         {
             // Update content size
             UIScrollView *superScrollView = (UIScrollView *)self.superview;
             CGSize newContentSize = CGSizeMake(superScrollView.bounds.size.width, CGRectGetMaxY(self.frame));
             [superScrollView setContentSize:newContentSize];
+        }
+        else if (self.superview.isHidden && [self.superview conformsToProtocol:@protocol(NIBChainProtocol)])
+        {
+            // Update super view saved frame
+            UIView<NIBChainProtocol> *castSuper = (UIView<NIBChainProtocol> *)self.superview;
+            CGRect superFrame = castSuper.frame;
+            superFrame.size.height = CGRectGetMaxY(self.frame);
+            [castSuper setSavedFrame:superFrame];
         }
         else
         {

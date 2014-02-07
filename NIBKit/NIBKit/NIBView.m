@@ -52,28 +52,18 @@
             // Set found view
             view = item;
             
-            // Pass placeholder content mode through
-            view.contentMode = placeholder.contentMode;
-            
             // Pass placeholder tag through
             view.tag = placeholder.tag;
             
             // Pass placeholder interaction properties through
             view.userInteractionEnabled = placeholder.userInteractionEnabled;
-            view.multipleTouchEnabled = placeholder.multipleTouchEnabled;
             
             // Pass placeholder alpha through
             view.alpha = placeholder.alpha;
             
-            // Pass placeholder background through
-            view.backgroundColor = placeholder.backgroundColor;
-            
             // Pass placeholder drawing properties through
             view.opaque = placeholder.opaque;
             view.hidden = placeholder.hidden;
-            view.clearsContextBeforeDrawing = placeholder.clearsContextBeforeDrawing;
-            view.clipsToBounds = placeholder.clipsToBounds;
-            view.autoresizesSubviews = placeholder.autoresizesSubviews;
             
             // Pass placeholder frame properties through
             view.frame = placeholder.frame;

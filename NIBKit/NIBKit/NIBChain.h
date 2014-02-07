@@ -21,7 +21,7 @@
 
 @protocol NIBChainProtocol <NSObject>
 
-@property (nonatomic, readonly) CGRect savedFrame;
+@property (nonatomic) CGRect savedFrame;
 @property (nonatomic, readonly) BOOL removedFromSuperview;
 @property (nonatomic, weak) IBOutlet UIView<NIBChainProtocol> *nextView;
 
@@ -29,8 +29,9 @@
 
 @interface UIView (NIBChain)
 
+- (void)checkAutoresizingMask:(UIViewAutoresizing *)autoresizingMask;
 - (void)removeChainedViewFromSuperview;
-- (void)setChainedViewHidden:(BOOL)hidden savedFrame:(CGRect*)savedFrame;
-- (void)reframeNextChainedView:(UIView *)nextView;
+- (void)setChainedViewHidden:(BOOL)hidden;
+- (void)reframeNextChainedView;
 
 @end

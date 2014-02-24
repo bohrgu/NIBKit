@@ -21,7 +21,7 @@
 
 @protocol NIBChainProtocol <NSObject>
 
-@property (nonatomic) CGRect savedFrame;
+@property (nonatomic) CGSize savedSize;
 @property (nonatomic, readonly) BOOL removedFromSuperview;
 @property (nonatomic, weak) IBOutlet UIView<NIBChainProtocol> *nextView;
 

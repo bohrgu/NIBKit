@@ -38,17 +38,17 @@
 {
     UIView<NIBChainProtocol> *castSelf = (UIView<NIBChainProtocol> *)self;
     
-    CGRect newFrame;
+    CGRect newFrame = self.frame;
     if (hidden)
     {
-        // Save current frame and shrink after
-        [castSelf setSavedFrame:self.frame];
-        newFrame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 0.0f);
+        // Save current frame size and shrink after
+        castSelf.savedSize = newFrame.size;
+        newFrame.size.height = 0.0f;
     }
     else
     {
-        // Reset using saved frame
-        newFrame = castSelf.savedFrame;
+        // Reset using saved size
+        newFrame.size = castSelf.savedSize;
     }
     
     [self setFrame:newFrame];
@@ -79,9 +79,7 @@
         {
             // Update super view saved frame
             UIView<NIBChainProtocol> *castSuper = (UIView<NIBChainProtocol> *)self.superview;
-            CGRect superFrame = castSuper.frame;
-            superFrame.size.height = CGRectGetMaxY(self.frame);
-            [castSuper setSavedFrame:superFrame];
+            castSuper.savedSize = CGSizeMake(castSuper.savedSize.width, CGRectGetMaxY(self.frame));
         }
         else
         {

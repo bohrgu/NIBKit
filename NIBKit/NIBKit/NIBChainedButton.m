@@ -20,7 +20,7 @@
 
 @implementation NIBChainedButton
 
-@synthesize savedFrame;
+@synthesize savedSize;
 @synthesize removedFromSuperview;
 @synthesize nextView;
 

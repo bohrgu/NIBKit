@@ -29,5 +29,6 @@
 + (instancetype)loadInstanceUsingPlaceholder:(NIBView *)placeholder;
 + (instancetype)loadInstanceUsingParentController:(NIBController *)controller;
 - (void)setParentController:(NIBController *)controller;
++ (CGSize)defaultNIBSize;
 
 @end

@@ -20,6 +20,8 @@
 #import "NIBController.h"
 #import "NIBChainedView.h"
 
+static NSMutableDictionary *nibSizes;
+
 @implementation NIBView
 
 - (id)awakeAfterUsingCoder:(NSCoder *)aDecoder
@@ -133,6 +135,43 @@
         [controller addChildViewController:self.selfController];
         self.selfController = nil;
     }
+}
+
++ (CGSize)defaultNIBSize
+{
+    // Initialize sizes dictionary once
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        nibSizes = [NSMutableDictionary new];
+    });
+    
+    @synchronized(nibSizes)
+    {
+        // Use nib name as a key
+        NSString *nibName = NSStringFromClass([self class]);
+        
+        // Check if size already exists
+        NSValue *sizeValue = [nibSizes objectForKey:nibName];
+        if (sizeValue)
+        {
+            return [sizeValue CGSizeValue];
+        }
+        else
+        {
+            UINib *nib = [UINib nibWithNibName:nibName bundle:nil];
+            NSArray *itemsInNib = [nib instantiateWithOwner:self options:nil];
+            for (UIView *item in itemsInNib)
+            {
+                if ([item isMemberOfClass:[self class]])
+                {
+                    [nibSizes setObject:[NSValue valueWithCGSize:item.frame.size] forKey:nibName];
+                    return item.frame.size;
+                }
+            }
+        }
+    }
+    
+    return CGSizeZero;
 }
 
 @end

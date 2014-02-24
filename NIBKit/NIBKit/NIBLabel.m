@@ -1,7 +1,7 @@
 /*
- NIBChain.h
+ NIBLabel.m
  
- Copyright 2014/02/03 Guillaume Bohr
+ Copyright 2014/02/24 Guillaume Bohr
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -16,22 +16,16 @@
  limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import "NIBLabel.h"
 
-@protocol NIBChainProtocol <NSObject>
+@implementation NIBLabel
 
-@property (nonatomic) CGSize savedSize;
-@property (nonatomic, readonly) BOOL removedFromSuperview;
-@property (nonatomic, weak) IBOutlet UIView<NIBChainProtocol> *nextView;
-
-@end
-
-@interface UIView (NIBChain)
-
-- (void)checkAutoresizingMask:(UIViewAutoresizing *)autoresizingMask;
-- (void)removeChainedViewFromSuperview;
-- (void)setChainedViewHidden:(BOOL)hidden;
-- (void)reframeNextChainedView;
+- (void)sizeToFitWidth
+{
+    CGRect newFrame = self.frame;
+    [self sizeToFit];
+    newFrame.size.height = self.frame.size.height;
+    [self setFrame:newFrame];
+}
 
 @end

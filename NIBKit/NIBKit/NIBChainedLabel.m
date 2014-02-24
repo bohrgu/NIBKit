@@ -20,7 +20,7 @@
 
 @implementation NIBChainedLabel
 
-@synthesize savedFrame;
+@synthesize savedSize;
 @synthesize removedFromSuperview;
 @synthesize nextView;
 
@@ -55,14 +55,6 @@
 {
     nextView = view;
     [self reframeNextChainedView];
-}
-
-- (void)sizeToFitWidth
-{
-    CGRect newFrame = self.frame;
-    [self sizeToFit];
-    newFrame.size.height = self.frame.size.height;
-    [self setFrame:newFrame];
 }
 
 @end

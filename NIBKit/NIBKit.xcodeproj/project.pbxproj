@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		EC261B2418BBF47C0041FBC6 /* NIBLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = EC261B2218BBF47C0041FBC6 /* NIBLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC261B2518BBF47C0041FBC6 /* NIBLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC261B2318BBF47C0041FBC6 /* NIBLabel.m */; };
 		ECD0CF8A18A039CF00FF61C7 /* NIBChain.h in Headers */ = {isa = PBXBuildFile; fileRef = ECD0CF8918A039CF00FF61C7 /* NIBChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECD0CF8D18A0439800FF61C7 /* NIBChainedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = ECD0CF8B18A0439800FF61C7 /* NIBChainedLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECD0CF8E18A0439800FF61C7 /* NIBChainedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD0CF8C18A0439800FF61C7 /* NIBChainedLabel.m */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC261B2218BBF47C0041FBC6 /* NIBLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIBLabel.h; sourceTree = "<group>"; };
+		EC261B2318BBF47C0041FBC6 /* NIBLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIBLabel.m; sourceTree = "<group>"; };
 		ECD0CF8918A039CF00FF61C7 /* NIBChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIBChain.h; sourceTree = "<group>"; };
 		ECD0CF8B18A0439800FF61C7 /* NIBChainedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIBChainedLabel.h; sourceTree = "<group>"; };
 		ECD0CF8C18A0439800FF61C7 /* NIBChainedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIBChainedLabel.m; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				ECE35F05189D966D00B2FF30 /* NIBController.h */,
 				ECE35F06189D966D00B2FF30 /* NIBController.m */,
 				ECE35F15189D996600B2FF30 /* NIBKit.h */,
+				EC261B2218BBF47C0041FBC6 /* NIBLabel.h */,
+				EC261B2318BBF47C0041FBC6 /* NIBLabel.m */,
 				ECE35F07189D966D00B2FF30 /* NIBView.h */,
 				ECE35F08189D966D00B2FF30 /* NIBView.m */,
 				ECE35F1E189D9E8E00B2FF30 /* Supporting Files */,
@@ -142,6 +148,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC261B2418BBF47C0041FBC6 /* NIBLabel.h in Headers */,
 				ECE35F2A189DA18200B2FF30 /* NIBController.h in Headers */,
 				ECD0CF9518A051D500FF61C7 /* NIBChainedButton.h in Headers */,
 				ECE35F29189DA17B00B2FF30 /* NIBChainedView.h in Headers */,
@@ -240,6 +247,7 @@
 				ECD0CF9818A2D59D00FF61C7 /* NIBChain.m in Sources */,
 				ECE35F2B189DA18600B2FF30 /* NIBController.m in Sources */,
 				ECE35F2E189DA19100B2FF30 /* NIBView.m in Sources */,
+				EC261B2518BBF47C0041FBC6 /* NIBLabel.m in Sources */,
 				ECD0CF9218A0518000FF61C7 /* NIBChainedImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

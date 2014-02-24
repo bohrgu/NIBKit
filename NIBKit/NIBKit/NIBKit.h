@@ -25,6 +25,7 @@
 #import <NIBKit/NIBChainedLabel.h>
 #import <NIBKit/NIBChainedView.h>
 #import <NIBKit/NIBController.h>
+#import <NIBKit/NIBLabel.h>
 #import <NIBKit/NIBView.h>
 
 #endif

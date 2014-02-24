@@ -16,11 +16,9 @@
  limitations under the License.
  */
 
-#import <UIKit/UIKit.h>
+#import "NIBLabel.h"
 #import "NIBChain.h"
 
-@interface NIBChainedLabel : UILabel <NIBChainProtocol>
-
-- (void)sizeToFitWidth;
+@interface NIBChainedLabel : NIBLabel <NIBChainProtocol>
 
 @end

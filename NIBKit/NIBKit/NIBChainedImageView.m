@@ -20,7 +20,7 @@
 
 @implementation NIBChainedImageView
 
-@synthesize savedFrame;
+@synthesize savedSize;
 @synthesize removedFromSuperview;
 @synthesize nextView;
 
